@@ -1,0 +1,221 @@
+/* 从border开始算宽度 */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* background: rgba(0, 0, 0, .1); */
+}
+
+body {
+    background: #f5f5f5;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* 前置，
+
+1.要考虑给一个主页限制一个居中无论放大缩小都居中 
+
+*/
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+
+/* 2.浮动 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.container:before,
+.container:after,
+.clear-float:after,
+.clear-float:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 3.分列 */
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10 {
+    position: relative;
+    min-height: 1px;
+    float: left;
+}
+
+.col-1 {
+    width: 10%;
+}
+
+.col-2 {
+    width: 20%;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.col-4 {
+    width: 40%;
+}
+
+.col-5 {
+    width: 50%;
+}
+
+.col-6 {
+    width: 60%;
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-8 {
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-nav {
+    background: #eee;
+}
+
+.top-nav .item {
+    padding: 6px 10px;
+    display: inline-block;
+    color: #666;
+}
+
+.top-nav .item:hover {
+    color: #333;
+}
+
+.header {
+    padding: 20px;
+}
+
+.header>* {
+    margin-bottom: 20px;
+}
+
+.header .logo {
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 60px;
+}
+
+.header .search-bar {
+    border: 2px solid #dd182b;
+}
+
+.header .search-bar input {
+    padding: 8px 20px;
+    border: 0;
+    outline: 0;
+}
+
+.header .search-bar button {
+    padding: 8px 20px;
+    border: 0
+}
+
+.header .search-bar button {
+    background: #dd182b;
+    color: #fff;
+}
+
+
+/* .header .cart .trigger {
+    background: #fff;
+    padding: 0px 20px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+}
+
+.main-promote .cat {
+    background: #6e6568;
+    color: #fff;
+} */
+
+.header .cart .trigger {
+    padding: 6px 20px;
+    background: #fff;
+    color: #dd182b;
+    text-align: center;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.main-promote .cat {
+    background: #6e6568;
+    color: #fff;
+}
+
+.main-promote .cat .row {
+    padding: 12px 20px;
+}
+
+.header .main-promote .side {
+    background-color: #fff;
+    padding: 5px;
+}
+
+.header .main-promote .circle {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: #ccc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header .main-promote .hint {
+    padding: 10px 0;
+}
+
+.header .main-promote .hint button {
+    border: 2px solid #dd182b;
+    color: #dd182b;
+    width: 40%;
+    background-color: #fff;
+}
+
+.cat-promote .promote-seg .card {
+    height: 300px;
+    margin: 5px
+}
